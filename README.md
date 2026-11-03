@@ -2,7 +2,7 @@
 
 > Real-time orca detection from live hydrophone audio, powered by a CNN + LangChain workflow that generates conservation-focused social media posts — automatically.
 
-Built for the AWS Hackathon · MIT License · [Nirvaan Labs](https://github.com/NirvaanLabs)
+MIT License · [github.com/cherylfernandes07/ocean-detect](https://github.com/cherylfernandes07/ocean-detect)
 
 ---
 
@@ -271,17 +271,21 @@ Posts will appear automatically on your page when a detection is confirmed and a
 
 ---
 
-## Data sources
+## Orcasound
 
-- **Training data**: [Orcasound public S3 archive](https://github.com/orcasound/orcadata) — labeled orca call clips from Southern Resident J, K, and L pods
-- **Live stream**: Orcasound hydrophone network, Puget Sound, Washington
-- **Orca profiles**: Based on [The Whale Museum](https://whalemuseum.org) and [Center for Whale Research](https://www.whaleresearch.com) identification records
+OceanDetect is built on top of the [Orcasound](https://www.orcasound.net) open-source conservation network:
+
+- **Training data** — labeled orca call clips sourced from the [Orcasound public S3 archive](https://github.com/orcasound/orcadata), contributed by the Southern Resident research community
+- **Hydrophone network** — live audio source is the Orcasound Lab hydrophone in Puget Sound, Washington
+- **Orca identification** — individual orca profiles based on records from [The Whale Museum](https://whalemuseum.org) and the [Center for Whale Research](https://www.whaleresearch.com)
+
+OceanDetect would not exist without the Orcasound community's years of labeled data collection.
 
 ---
 
 ## Contributing
 
-This is an open-source project under the [Nirvaan Labs](https://github.com/NirvaanLabs) GitHub org. Contributions welcome:
+This is an open-source project. Contributions welcome:
 
 - 🧠 Better CNN architecture or training data
 - 🐋 More orca personality profiles
@@ -352,3 +356,11 @@ The lower the detection rate, the greater the savings — and the more a detecti
 - **Hugging Face model publish** — upload `model_best_f1.pt` and the training script so the community can fine-tune or benchmark against it
 - **Cloud deploy** — host the FastAPI backend on Render or Azure so the frontend can be used without running a local server
 - **Multi-species support** — the spectrogram pipeline and LangChain chain are species-agnostic; extending to humpbacks or gray whales requires only new training data and personality prompts
+
+---
+
+## License
+
+MIT · Built with ❤️ for the Southern Residents
+
+*"The water remembers every fin that has passed through it."*
